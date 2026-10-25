@@ -25,7 +25,7 @@ public class ProjectorRemote : TeachingDevice
     public override bool IsReadyForUse()
     {
         // Kiểm tra ngưỡng pin khả dụng
-        return BatteryLevel >= 20;
+       return Status == DeviceStatus.Available && BatteryLevel >= 20;
     }
 
     // Điểm ưu tiên mặc định bằng mức pin
