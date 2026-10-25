@@ -39,9 +39,8 @@ public class AllocationService<T> where T : TeachingDevice
             .ToList();
 
         // 4. Dùng chiến lược hiện tại để chọn thiết bị
-        T selected = strategy.Select(candidates.AsReadOnly());
-
-        // 6. Trả về thiết bị đã cấp phát
-        return selected;
+       T selected = strategy.Select(candidates.AsReadOnly());
+         selected.Borrow();
+         return selected;
     }
 }
