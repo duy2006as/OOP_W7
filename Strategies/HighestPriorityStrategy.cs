@@ -31,7 +31,7 @@ public class HighestPriorityStrategy<T> : ISelectionStrategy<T>
         {
             double currentScore = scoreSelector(candidates[i]);
             // So sánh điểm ưu tiên
-            if (currentScore < bestScore)
+            if (currentScore > bestScore)
             {
                 bestScore = currentScore;
                 bestItem = candidates[i];
